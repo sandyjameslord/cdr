@@ -27,18 +27,27 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 
 const mapRoutes = require("./routes/map");
-app.use("/api", mapRoutes);
+app.use(mapRoutes);
+// app.use("/api", mapRoutes);
 
 const appointmentRoutes = require("./routes/appointment");
-app.use("/api", appointmentRoutes);
+app.use(appointmentRoutes);
+// app.use("/api", appointmentRoutes);
 
 const dogRoutes = require("./routes/dog");
-app.use("/api", dogRoutes);
+app.use(dogRoutes);
+// app.use("/api", dogRoutes);
 
 const userRoutes = require("./routes/auth");
-app.use('/api', userRoutes);
+app.use(userRoutes);
+// app.use('/api', userRoutes);
 
-app.listen(PORT, (err) => {
-    if (err) {console.log(err)}
-    else {console.log("listening on PORT:", PORT)}
-});
+// app.listen(PORT, (err) => {
+//     if (err) {console.log(err)}
+//     else {console.log("listening on PORT:", PORT)}
+// });
+
+module.exports = {
+    path: '/api',
+    handler: app
+}

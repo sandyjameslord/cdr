@@ -63,6 +63,10 @@ export default {
   build: {
   },
 
+  serverMiddleware: [
+    '~/server/server.js'
+  ],
+
   auth: {
     strategies: {
       local: {

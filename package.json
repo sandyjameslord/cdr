@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "install-server": "npm -i --prefix ./server",
+    "install-server": "npm i --prefix ./server",
     "heroku-postbuild": "npm run install-server && npm run build",
     "generate": "nuxt generate"
   },

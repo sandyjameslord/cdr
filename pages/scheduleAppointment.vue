@@ -48,7 +48,7 @@
 
 export default {
     
-    middleware: "auth",
+    // middleware: "auth",
     updated() {
         this.timesTakenThisDate(this.date);
         // this.makeToday();

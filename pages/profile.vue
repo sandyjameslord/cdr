@@ -211,9 +211,9 @@ export default {
 
 
 
-                    // let lnk = document.createElement("a");
-                    // lnk.appendChild(newLinkToScheduleAppointmentPage);
-                    // lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
+                    let lnk = document.createElement("a");
+                    lnk.appendChild(newLinkToScheduleAppointmentPage);
+                    lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
                     
 
 
@@ -223,15 +223,15 @@ export default {
 
 
 
-                    let lnk = document.createElement("nuxt-link");
-                    lnk.appendChild(newLinkToScheduleAppointmentPage);
+                    // let lnk = document.createElement("nuxt-link");
+                    // lnk.appendChild(newLinkToScheduleAppointmentPage);
 
 
 
                     // <div><nuxt-link :to="{ path: 'startAppointment', query: { dogName: `${appt.dogName}`, ownerEmail: `${appt.ownerEmail}`, date: `${appt.date}`, time: `${appt.time}` }}">Start {{appt.dogName}}'s appointment.</nuxt-link></div>
 
-                    console.log("attempting to go to scheduleAppointment");
-                    lnk.setAttribute(':to', `{ path: 'scheduleAppointment', query: {dogName: ${this.dogs[i].dogName}}}`);
+                    // console.log("attempting to go to scheduleAppointment");
+                    // lnk.setAttribute(':to', `{ path: 'scheduleAppointment', query: {dogName: ${this.dogs[i].dogName}}}`);
                     //  ")             `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
 
 

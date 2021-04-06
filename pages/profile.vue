@@ -230,7 +230,7 @@ export default {
 
                     // <div><nuxt-link :to="{ path: 'startAppointment', query: { dogName: `${appt.dogName}`, ownerEmail: `${appt.ownerEmail}`, date: `${appt.date}`, time: `${appt.time}` }}">Start {{appt.dogName}}'s appointment.</nuxt-link></div>
 
-
+                    console.log("attempting to go to scheduleAppointment");
                     lnk.setAttribute(':to', `{ path: 'scheduleAppointment', query: {dogName: ${this.dogs[i].dogName}}}`);
                     //  ")             `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
 

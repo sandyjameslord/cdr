@@ -231,7 +231,7 @@ export default {
             button.style.width = "0";
 
 
-            let result = await this.$axios.$post("http://localhost:3000/api/appointments", data);
+            let result = await this.$axios.$post("/api/appointments", data);
 
             // let button =  document.getElementById("addAppointmentBtn");
             // button.disabled = "disabled";

@@ -211,10 +211,17 @@ export default {
 
 
 
-                    let lnk = document.createElement("a");
-                    lnk.appendChild(newLinkToScheduleAppointmentPage);
-                    lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
+                    // let lnk = document.createElement("a");
+                    // lnk.appendChild(newLinkToScheduleAppointmentPage);
+                    // lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
                     
+                    let lnk = document.createElement("nuxt-link");
+                    lnk.appendChild(newLinkToScheduleAppointmentPage);
+                    lnk.setAttribute(':to', `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
+
+
+
+
                     newNode.appendChild(dogProfileLink);
                     newNode.appendChild(newDogName);
                     newNode.appendChild(lnk);

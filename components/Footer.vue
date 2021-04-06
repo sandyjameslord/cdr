@@ -71,13 +71,13 @@ export default {
     /* padding: 4px 2px; */
 
 
-    padding-right: 0px;
+    padding-right: 6px;
     padding-left: 6px;
     padding-top: 5px;
     padding-bottom: 5px;
     border: 1px solid black;
     font-size: 1.3em;
-    /* width: fit-content; */
+    width: fit-content;
     /* font-size: 3em; */
 }
 

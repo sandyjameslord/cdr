@@ -32,8 +32,8 @@ export default {
   #backgroundIMG {
     position: absolute;
     top: 0;
-    height: 200%;
-    width: 200%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     z-index: -99;
     opacity: 0.2;

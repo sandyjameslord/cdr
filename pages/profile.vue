@@ -217,7 +217,14 @@ export default {
                     
                     let lnk = document.createElement("nuxt-link");
                     lnk.appendChild(newLinkToScheduleAppointmentPage);
-                    lnk.setAttribute(':to', `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
+
+
+
+                    // <div><nuxt-link :to="{ path: 'startAppointment', query: { dogName: `${appt.dogName}`, ownerEmail: `${appt.ownerEmail}`, date: `${appt.date}`, time: `${appt.time}` }}">Start {{appt.dogName}}'s appointment.</nuxt-link></div>
+
+
+                    lnk.setAttribute(':to', `{ path: "scheduleAppointment", query: {dogName: ${this.dogs[i].dogName}}}`);
+                    //  ")             `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
 
 
 

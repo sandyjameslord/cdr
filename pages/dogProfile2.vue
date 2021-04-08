@@ -2,8 +2,14 @@
     <main>
         <div id="topContainer">
             <div id='title'>{{$route.query.dog}}'s Profile</div>
-        
-            <div v-for="(dog, index) in dogs" :key="dog._id">
+            <img class='dogPhoto' alt="">
+            <div class="dogName">{{$route.query.dog}}</div>
+            <div class="dogNotesTitle">Notes:</div>
+            <div class="dogNotes"></div>
+            
+            
+            
+            <!-- <div v-for="(dog, index) in dogs" :key="dog._id">
                 <div v-if="dog.ownerEmail == $auth.$state.user.email">
                     <div v-if="($route.query.dog == dog.dogName)">
                         <img class='dogPhoto' :src="dog.photo" alt="">
@@ -12,7 +18,7 @@
                         <div class='dogNotes'>{{dog.notesAboutDog}}</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         
         <div>
@@ -77,7 +83,7 @@ export default {
 
     },
     created() {
-
+        this.makeThisDogsProfileInformationAppear();
     },
     async asyncData({ $axios }) {
       try {
@@ -98,7 +104,10 @@ export default {
     methods: {
         makeThisDogsProfileInformationAppear() {
             for (let i = 0; i < this.dogs.length; i++) {
-                
+                let dog = dogs[i];
+                if (dog.dogName == this.$route.query.dog) {
+                    console.log('right dog: ', dog.dogName);
+                }
             }
         },
 

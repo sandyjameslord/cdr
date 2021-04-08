@@ -105,8 +105,8 @@ export default {
 
     methods: {
         makeThisDogsProfileInformationAppear() {
-            for (let i = 0; i < dogs.length; i++) {
-                let dog = dogs[i];
+            for (let i = 0; i < this.dogs.length; i++) {
+                let dog = this.dogs[i];
                 if (dog.dogName == this.$route.query.dog) {
                     console.log('right dog: ', dog.dogName);
                 }

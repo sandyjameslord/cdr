@@ -1,5 +1,7 @@
 <template>
     <main>
+
+        <button @click="makeThisDogsProfileInformationAppear()">make this info appear</button>
         <div id="topContainer">
             <div id='title'>{{$route.query.dog}}'s Profile</div>
             <img class='dogPhoto' alt="">
@@ -83,7 +85,7 @@ export default {
 
     },
     created() {
-        this.makeThisDogsProfileInformationAppear();
+        // this.makeThisDogsProfileInformationAppear();
     },
     async asyncData({ $axios }) {
       try {

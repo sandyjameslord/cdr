@@ -14,6 +14,8 @@
             </div>
         </div>
         
+        <button @click="manualAsyncData()">click to show data</button>
+
         <div>
             <nuxt-link id='schedAppt' :to="{ path: 'scheduleAppointment', query: { dog: `${$route.query.dog}`}}">Schedule an appointment for {{this.$route.query.dog}}</nuxt-link>
         </div>
@@ -27,20 +29,22 @@ export default {
     async asyncData({ $axios }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");
-        let appointmentsResponse = await $axios.$get("/api/appointments");
-        let mapsResponse = await $axios.$get("/api/maps")
 
         console.log("inside asyncdata, looking into dogsresponse");
         console.log("dogsResponse", dogsResponse);
 
         return {
           dogs: dogsResponse.dogs,
-          appointments: appointmentsResponse.appointments,
-          maps: mapsResponse.maps,
         }
       } catch (err) {
         console.log(err.message)
       }
+    },
+    methods: {
+        async manualAsyncData() {
+            let dr = await $axios.$get("/api/dogs");
+            console.log("dog response, dr", dr);
+        },
     },
 }
 </script>

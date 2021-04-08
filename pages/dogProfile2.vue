@@ -112,7 +112,7 @@ export default {
 
     methods: {
         returnDogData() {
-            console.log("this.$store.state.dogs", this.$store.state.dogs);
+            console.log("this.$store.state", this.$store.state);
         },
 
 

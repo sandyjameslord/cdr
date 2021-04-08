@@ -2,7 +2,7 @@
     <main>
 
         <button @click="makeThisDogsProfileInformationAppear()">make this info appear</button>
-        <button @click="returnDogData()">returnDogData</button>
+        <!-- <button @click="returnDogData()">returnDogData</button> -->
         <div id="topContainer">
             <!-- <div id='title'>{{$route.query.dog}}'s Profile</div>
             <img class='dogPhoto' alt="">
@@ -111,13 +111,13 @@ export default {
     },
 
     methods: {
-        returnDogData({ $axios }) {
-            console.log("this.$store.state", this.$store.state);
-            console.log("this.$route", this.$route);
-            console.log("dogsresponse before asking for response (text only)");
-            let dogsResponse = await $axios.$get("/api/dogs");
-            console.log("dogsresponse", dogsResponse);
-        },
+        // returnDogData({ $axios }) {
+        //     console.log("this.$store.state", this.$store.state);
+        //     console.log("this.$route", this.$route);
+        //     console.log("dogsresponse before asking for response (text only)");
+        //     let dogsResponse = await $axios.$get("/api/dogs");
+        //     console.log("dogsresponse", dogsResponse);
+        // },
 
 
         makeThisDogsProfileInformationAppear() {

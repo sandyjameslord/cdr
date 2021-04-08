@@ -41,8 +41,8 @@ export default {
       }
     },
     methods: {
-        async manualAsyncData({ $axios }) {
-            let dr = await $axios.$get("/api/dogs");
+        async manualAsyncData() {
+            let dr = await this.$axios.$get("/api/dogs");
             console.log("dog response, dr", dr);
         },
     },

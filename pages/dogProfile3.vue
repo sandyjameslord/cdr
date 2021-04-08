@@ -1,6 +1,16 @@
 <template>
     <main>
         
+        <template v-if="$auth.$state.loggedIn">
+            <div id='firstName' >user {{this.$auth.$state.user.firstName}} is logged in</div>
+        </template>
+
+        <template v-else>    
+            <div>NOT LOGGED IN??</div>
+        </template>
+
+
+
         <div id="topContainer">            
             
             

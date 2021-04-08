@@ -2,6 +2,11 @@
     <main>
         
         <div id="topContainer">            
+            
+            
+            
+            
+            
             <div v-for="(dog, index) in dogs" :key="dog._id">
                 <div v-if="dog.ownerEmail == $auth.$state.user.email">
                     <div v-if="($route.query.dog == dog.dogName)">
@@ -26,6 +31,7 @@
 <script>
 
 export default {
+    middleware: "auth",
     async asyncData({ $axios }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");

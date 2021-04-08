@@ -85,13 +85,16 @@ export default {
 
     },
     created() {
-        // this.makeThisDogsProfileInformationAppear();
+        
+        this.makeThisDogsProfileInformationAppear();
     },
-    async asyncData({ $axios }) {
+    async asyncData({ $axios, store }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");
         let appointmentsResponse = await $axios.$get("/api/appointments");
         let mapsResponse = await $axios.$get("/api/maps")
+
+        console.log("store.state.dogs", store.state.dogs)
 
         console.log("inside asyncdata, looking into dogsresponse");
         console.log("dogsResponse", dogsResponse);

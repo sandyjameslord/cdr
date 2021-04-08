@@ -2,17 +2,17 @@
     <main>
 
         <button @click="makeThisDogsProfileInformationAppear()">make this info appear</button>
-        <button @click="returnDogData()">dog state info</button>
+        <button @click="returnDogData()">returnDogData</button>
         <div id="topContainer">
-            <div id='title'>{{$route.query.dog}}'s Profile</div>
+            <!-- <div id='title'>{{$route.query.dog}}'s Profile</div>
             <img class='dogPhoto' alt="">
             <div class="dogName">{{$route.query.dog}}</div>
             <div class="dogNotesTitle">Notes:</div>
-            <div class="dogNotes"></div>
+            <div class="dogNotes"></div> -->
             
             
             
-            <!-- <div v-for="(dog, index) in dogs" :key="dog._id">
+            <div v-for="(dog, index) in dogs" :key="dog._id">
                 <div v-if="dog.ownerEmail == $auth.$state.user.email">
                     <div v-if="($route.query.dog == dog.dogName)">
                         <img class='dogPhoto' :src="dog.photo" alt="">
@@ -21,7 +21,7 @@
                         <div class='dogNotes'>{{dog.notesAboutDog}}</div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         
         <div>
@@ -114,8 +114,9 @@ export default {
         returnDogData({ $axios }) {
             console.log("this.$store.state", this.$store.state);
             console.log("this.$route", this.$route);
+            console.log("dogsresponse before asking for response (text only)");
             let dogsResponse = await $axios.$get("/api/dogs");
-            console.log("dogsresponse", dogsResponse)
+            console.log("dogsresponse", dogsResponse);
         },
 
 

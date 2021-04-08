@@ -111,9 +111,11 @@ export default {
     },
 
     methods: {
-        returnDogData() {
+        returnDogData({ $axios }) {
             console.log("this.$store.state", this.$store.state);
             console.log("this.$route", this.$route);
+            let dogsResponse = await $axios.$get("/api/dogs");
+            console.log("dogsresponse", dogsResponse)
         },
 
 

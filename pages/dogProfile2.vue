@@ -2,6 +2,7 @@
     <main>
 
         <button @click="makeThisDogsProfileInformationAppear()">make this info appear</button>
+        <button @click="returnDogData()">dog state info</button>
         <div id="topContainer">
             <div id='title'>{{$route.query.dog}}'s Profile</div>
             <img class='dogPhoto' alt="">
@@ -86,15 +87,15 @@ export default {
     },
     created() {
         
-        this.makeThisDogsProfileInformationAppear();
+        // this.makeThisDogsProfileInformationAppear();
     },
-    async asyncData({ $axios, store }) {
+    async asyncData({ $axios }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");
         let appointmentsResponse = await $axios.$get("/api/appointments");
         let mapsResponse = await $axios.$get("/api/maps")
 
-        console.log("store.state.dogs", store.state.dogs)
+        // console.log("store.state.dogs", store.state.dogs)
 
         console.log("inside asyncdata, looking into dogsresponse");
         console.log("dogsResponse", dogsResponse);
@@ -110,6 +111,11 @@ export default {
     },
 
     methods: {
+        returnDogData() {
+            console.log("store.state.dogs", store.state.dogs)
+        },
+
+
         makeThisDogsProfileInformationAppear() {
             for (let i = 0; i < this.dogs.length; i++) {
                 let dog = this.dogs[i];

@@ -93,6 +93,9 @@ export default {
         let appointmentsResponse = await $axios.$get("/api/appointments");
         let mapsResponse = await $axios.$get("/api/maps")
 
+        console.log("inside asyncdata, looking into dogsresponse");
+        console.log("dogsResponse", dogsResponse);
+
         return {
           dogs: dogsResponse.dogs,
           appointments: appointmentsResponse.appointments,

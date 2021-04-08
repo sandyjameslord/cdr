@@ -82,13 +82,13 @@
 
 export default {
     // middleware: "auth",
-    updated() {
+    // updated() {
 
-    },
-    created() {
+    // },
+    // created() {
         
-        // this.makeThisDogsProfileInformationAppear();
-    },
+    //     // this.makeThisDogsProfileInformationAppear();
+    // },
     async asyncData({ $axios }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");
@@ -113,6 +113,7 @@ export default {
     methods: {
         returnDogData() {
             console.log("this.$store.state", this.$store.state);
+            console.log("this.$route", this.$route);
         },
 
 

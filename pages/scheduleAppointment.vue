@@ -26,7 +26,7 @@
                 <!-- </div> -->
         </div>
 
-        <button @click='showDogsIngo()'>showDogsInfo</button>
+        <button @click='showDogsInfo()'>showDogsInfo</button>
 
         
                    

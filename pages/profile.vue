@@ -176,7 +176,7 @@ export default {
                     
                     let dogProfileLink = document.createElement("a");
                     dogProfileLink.appendChild(newDogImage);
-                    dogProfileLink.setAttribute('href', `/dogProfile?dog=${this.dogs[i].dogName}`);
+                    dogProfileLink.setAttribute('href', `/dogProfile?dog=${this.dogs[i].dogName}&ownerID=${this.dogs[i].ownerID}`);
 
                     // let newLinkToScheduleAppointmentPage = document.createElement("div");
                     // newLinkToScheduleAppointmentPage.className = 'sched';

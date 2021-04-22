@@ -2,7 +2,7 @@
     <main>
         <div id="topContainer">
             <div id='title'>{{$route.query.dog}}'s Profile</div>
-        
+            <nuxt-link id='schedAppt' :to="{ path: 'scheduleAppointment', query: { dog: `${$route.query.dog}`, ownerID: `${$route.query.ownerID}`}}">Schedule an appointment for {{this.$route.query.dog}}</nuxt-link>
             <div v-for="(dog, index) in dogs" :key="dog._id">
                 <div class='dogName'>dog {{index+1}} name:{{dog.dogName}}</div>
                 <div v-if="dog.ownerEmail == $auth.$state.user.email">

@@ -213,7 +213,7 @@ export default {
 
                     let lnk = document.createElement("a");
                     lnk.appendChild(newLinkToScheduleAppointmentPage);
-                    lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}`);
+                    lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}&ownerEmail=${this.dogs[i].ownerEmail}`);
                     
 
 

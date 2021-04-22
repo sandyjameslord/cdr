@@ -13,7 +13,7 @@
         
             <div v-for="(dog) in dogs" :key="dog._id">
             <!-- <div v-for="(dog, index) in dogs" :key="dog._id">                 -->
-            <div class='dogDisplay' v-if="dog.ownerEmail == $auth.$state.user.email">
+            <div class='dogDisplay' v-if="((dog.ownerEmail == $auth.$state.user.email) || (dog.ownerEmail == this.$route.query.ownerEmail))">
                 <div v-if="($route.query.dog == dog.dogName)">
                     <div id='dogContainer'>
                         <img class='dogPhoto' :src="dog.photo" alt="">

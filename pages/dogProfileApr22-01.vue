@@ -4,7 +4,6 @@
             <div id='title'>{{$route.query.dog}}'s Profile</div>
         
             <div v-for="(dog, index) in dogs" :key="dog._id">
-                <div class='dogName'>dog {{index+1}} name:{{dog.dogName}}</div>
                 <div v-if="dog.ownerEmail == $auth.$state.user.email">
                     <div v-if="($route.query.dog == dog.dogName)">
                         <img class='dogPhoto' :src="dog.photo" alt="">

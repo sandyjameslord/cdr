@@ -41,7 +41,7 @@
 <script>
 
 export default {
-    middleware: "auth",
+    // middleware: "auth",
     async asyncData({ $axios }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");

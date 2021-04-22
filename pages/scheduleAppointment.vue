@@ -11,21 +11,21 @@
         <div id='scheduleAppointmentTitle'>Schedule appointment</div>
         
         
-        <div v-for="(dog) in dogs" :key="dog._id">
+        <!-- <div v-for="(dog) in dogs" :key="dog._id">
             <img class='dogPhoto' :src="dog.photo" alt="">
             <div class='dogName'>{{dog.dogName}}</div>
             <div>DOG! (1 of many)</div>
             <div v-for="(dog, index) in dogs" :key="dog._id">                
                 <div class='dogDisplay' v-if="(dog.ownerID == this.$route.query.ownerID)">
                     <div>should only have 1 or 2 dogs!!</div>
-                    <div v-if="(this.$route.query.dog == dog.dogName)">
+                    <div v-if="(this.$route.query.dog == dog.dogName)"> -->
                         <!-- <div id='dogContainer'> -->
                             <!-- <img class='dogPhoto' :src="dog.photo" alt="">
                             <div class='dogName'>{{dog.dogName}}</div> -->
                         <!-- </div>   -->
                     <!-- </div>      -->
                 <!-- </div> -->
-        </div>
+        <!-- </div> -->
 
         <button @click='showDogsInfo()'>showDogsInfo</button>
 

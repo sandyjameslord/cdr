@@ -198,7 +198,7 @@ export default {
 
 
 
-                    lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}&ownerEmail=${this.dogs[i].ownerEmail}&ownerID=${this.dogs[i].ownerID}`);
+                    lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}&ownerID=${this.dogs[i].ownerID}`);
                     
                     newNode.appendChild(dogProfileLink);
                     newNode.appendChild(newDogName);

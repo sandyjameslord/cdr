@@ -25,6 +25,9 @@
                     <!-- </div>      -->
                 <!-- </div> -->
         </div>
+
+        <button @click='showDogsIngo()'>showDogsInfo</button>
+
         
                    
         <form action="">
@@ -84,6 +87,10 @@ export default {
     },
 
     methods: {
+        showDogsInfo(){
+            let dogs = this.dogs;
+            console.log("this.dogs", this.dogs)
+        },
         makeToday() {
             var today = new Date();
             var dd = today.getDate();

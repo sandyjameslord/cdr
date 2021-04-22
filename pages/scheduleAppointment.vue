@@ -54,7 +54,12 @@
 export default {
     
     // middleware: "auth",
-
+    data() {      
+        return {
+            date: "",
+            time: "",
+        }
+    },
     async asyncData({ $axios }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");
@@ -69,12 +74,7 @@ export default {
       }
     },
 
-    data() {      
-        return {
-            date: "",
-            time: "",
-        }
-    },
+    
     updated() {
         this.timesTakenThisDate(this.date);
         // this.makeToday();

@@ -13,7 +13,7 @@
         
             <div v-for="(dog) in dogs" :key="dog._id">
             <!-- <div v-for="(dog, index) in dogs" :key="dog._id">                 -->
-            <div class='dogDisplay' v-if="((dog.ownerEmail == $auth.$state.user.email) || (dog.ownerEmail == this.$route.query.ownerEmail))">
+            <div class='dogDisplay' v-if="((dog.ownerEmail == $auth.$state.user.email) || (this.emailToPass == this.$route.query.ownerEmail))">
                 <div v-if="($route.query.dog == dog.dogName)">
                     <div id='dogContainer'>
                         <img class='dogPhoto' :src="dog.photo" alt="">
@@ -279,7 +279,25 @@ export default {
     },
     mounted() {
         let email = this.$route.query.ownerEmail;
-        console.log("in mounted, this.$route.query.ownerEmail", email)
+        // this.confirmedEmail = email;
+        console.log("in mounted, this.$route.query.ownerEmail", email);
+
+        let ownerEmails = [];
+
+        for (let i = 0; i < this.dogs.length; i++) {
+            let email = this.dogs[i].ownerEmail;
+            ownerEmails.push(email);
+        }
+        
+        let emailToPass = "";
+
+        for (let i = 0; i < ownerEmails.length; i++) {
+            if (ownerEmails[i] == email) { 
+                emailToPass = ownerEmails[i]
+            }
+        }
+        this.emailToPass = emailToPass;
+
     },    
 }
 </script>

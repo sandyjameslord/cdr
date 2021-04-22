@@ -284,6 +284,8 @@ export default {
 
         let ownerEmails = [];
 
+        console.log("this.dogs", this.dogs)
+
         for (let i = 0; i < this.dogs.length; i++) {
             let email = this.dogs[i].ownerEmail;
             ownerEmails.push(email);

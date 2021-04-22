@@ -8,7 +8,8 @@ const DogSchema = new Schema({
     approved: String,
     photo: String,
     notesAboutDog: String,
-    questionsAboutDog: String
+    questionsAboutDog: String,
+    ownerID: String,
     // price: Number
 });
 

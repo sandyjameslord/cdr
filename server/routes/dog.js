@@ -71,6 +71,7 @@ router.post("/dogs", upload.single("photo"), async (req, res) => {
         dog.photo = req.file.location;
         dog.notesAboutDog = req.body.notesAboutDog;
         dog.questionsAboutDog = req.body.questionsAboutDog;
+        dog.ownerID = req.body.ownerID;
         // product.price = req.body.price;
 
         await dog.save();

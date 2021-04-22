@@ -52,6 +52,7 @@ export default {
             data.append("photo", this.selectedFile, this.selectedFile.name);
             data.append("notesAboutDog", this.notesAboutDog);
             data.append("questionsAboutDog", this.questionsAboutDog);
+            data.append("ownerID", this.$auth.$state.user._id);
 
             let button =  document.getElementById("signupDogBtn");
             button.style.opacity = "0";

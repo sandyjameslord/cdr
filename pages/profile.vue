@@ -178,31 +178,31 @@ export default {
                     dogProfileLink.appendChild(newDogImage);
                     dogProfileLink.setAttribute('href', `/dogProfile?dog=${this.dogs[i].dogName}`);
 
-                    let newLinkToScheduleAppointmentPage = document.createElement("div");
-                    newLinkToScheduleAppointmentPage.className = 'sched';
-                    newLinkToScheduleAppointmentPage.innerHTML = `Add Appt for ${(this.dogs[i].dogName).slice(0, 7)}`;
-                    newLinkToScheduleAppointmentPage.style.cursor = "pointer"; 
-                    newLinkToScheduleAppointmentPage.style.textAlign = "center";
-                    newLinkToScheduleAppointmentPage.style.borderRadius = "10px";
-                    newLinkToScheduleAppointmentPage.style.border = "2px solid black";
-                    newLinkToScheduleAppointmentPage.style.padding = "2px 4px";
+                    // let newLinkToScheduleAppointmentPage = document.createElement("div");
+                    // newLinkToScheduleAppointmentPage.className = 'sched';
+                    // newLinkToScheduleAppointmentPage.innerHTML = `Add Appt for ${(this.dogs[i].dogName).slice(0, 7)}`;
+                    // newLinkToScheduleAppointmentPage.style.cursor = "pointer"; 
+                    // newLinkToScheduleAppointmentPage.style.textAlign = "center";
+                    // newLinkToScheduleAppointmentPage.style.borderRadius = "10px";
+                    // newLinkToScheduleAppointmentPage.style.border = "2px solid black";
+                    // newLinkToScheduleAppointmentPage.style.padding = "2px 4px";
 
-                    newLinkToScheduleAppointmentPage.style.marginBottom = "30px";
-                    newLinkToScheduleAppointmentPage.style.backgroundColor = "#f7b24a";
+                    // newLinkToScheduleAppointmentPage.style.marginBottom = "30px";
+                    // newLinkToScheduleAppointmentPage.style.backgroundColor = "#f7b24a";
 
-                    let lnk = document.createElement("a");
-                    lnk.appendChild(newLinkToScheduleAppointmentPage);
-
-
-                    // let emailNew = this.dogs[i].ownerEmail;
+                    // let lnk = document.createElement("a");
+                    // lnk.appendChild(newLinkToScheduleAppointmentPage);
 
 
+                    // // let emailNew = this.dogs[i].ownerEmail;
 
-                    lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}&ownerID=${this.dogs[i].ownerID}`);
+
+
+                    // lnk.setAttribute('href', `/scheduleAppointment?dog=${this.dogs[i].dogName}&ownerID=${this.dogs[i].ownerID}`);
                     
                     newNode.appendChild(dogProfileLink);
                     newNode.appendChild(newDogName);
-                    newNode.appendChild(lnk);
+                    // newNode.appendChild(lnk);
 
                     newNode.style.display = "flex";
                     newNode.style.flexDirection = "column";

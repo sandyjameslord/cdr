@@ -34,7 +34,7 @@ export default {
     },
     methods: {
         showDogsInfo() {
-            console.log("this.dogs",this.dogs)
+            console.log("this.dogs, dogs",this.dogs, dogs)
         }
     }
 

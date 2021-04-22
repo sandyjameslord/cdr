@@ -10,13 +10,14 @@
                         <div class='dogName'>{{dog.dogName}}</div>
                         <div class='dogNotesTitle'>Notes:</div>
                         <div class='dogNotes'>{{dog.notesAboutDog}}</div>
+                        <nuxt-link id='schedAppt' :to="{ path: 'scheduleAppointment', query: { dog: `${$route.query.dog}`, ownerID: `${dog.ownerID}`}}">Schedule an appointment for {{this.$route.query.dog}}</nuxt-link>
                     </div>
                 </div>
             </div>
         </div>
         
         <div>
-            <nuxt-link id='schedAppt' :to="{ path: 'scheduleAppointment', query: { dog: `${$route.query.dog}`, ownerID: `${$route.query.ownerID}`}}">Schedule an appointment for {{this.$route.query.dog}}</nuxt-link>
+            <!-- <nuxt-link id='schedAppt' :to="{ path: 'scheduleAppointment', query: { dog: `${$route.query.dog}`, ownerID: `${dog.ownerID}`}}">Schedule an appointment for {{this.$route.query.dog}}</nuxt-link> -->
         </div>
         <!-- dogProfileLink.setAttribute('href', `/dogProfile?dog=${this.dogs[i].dogName}`); -->
         <br>

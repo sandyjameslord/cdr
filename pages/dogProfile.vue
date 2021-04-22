@@ -25,7 +25,7 @@
         <hr>
         <div id='todaysAppointmentContainer'>
             
-            <div class='appointmentsLabel'> Today's Appointments</div>
+            <!-- <div class='appointmentsLabel'> Today's Appointments</div> -->
             <div v-for="(appt) in appointments" :key="appt._id">
                 <div v-if="appt.date == getNow() && appt.dogName == $route.query.dog">
                     <div>With {{appt.handlerName}} from {{appt.time}}.</div>
@@ -34,7 +34,7 @@
         </div>
         <br>
         <div id='futureAppointmentContainer'>
-            <div class='appointmentsLabel'> Future Appointments</div>
+            <!-- <div class='appointmentsLabel'> Future Appointments</div> -->
             <div v-for="(appt) in appointments" :key="appt._id">
                 <div v-if="appt.date > getNow() && appt.dogName == $route.query.dog">
                     <div>{{getAmericanEnglishDate(appt.date)}} at {{appt.time}} with {{appt.handlerName}}</div>
@@ -43,7 +43,7 @@
         </div>
         <br>
         <div id='pastAppointmentContainer'>
-            <div class='appointmentsLabel'> Past Appointments</div>
+            <!-- <div class='appointmentsLabel'> Past Appointments</div> -->
             <div v-for="(appt) in appointments" :key="appt._id">
                 <div v-if="appt.date < getNow() && appt.dogName == $route.query.dog">
                     <!-- <div>{{appt.dogName}} had  an appointment on {{getAmericanEnglishDate(appt.date)}} at {{appt.time}} with {{appt.handler}}</div> -->

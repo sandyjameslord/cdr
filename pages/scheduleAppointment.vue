@@ -13,7 +13,7 @@
         
             <div v-for="(dog) in dogs" :key="dog._id">
             <!-- <div v-for="(dog, index) in dogs" :key="dog._id">                 -->
-            <div class='dogDisplay' v-if="((dog.ownerEmail == $auth.$state.user.email) || ( dog.ownerEmail.startsWith(this.$route.query.ownerEmail.substring(0, 3)) ))">
+            <div class='dogDisplay' v-if="( (dog.ownerEmail == $auth.$state.user.email) || ( dog.ownerID == this.$route.query.ownerID) )">
                 <div v-if="($route.query.dog == dog.dogName)">
                     <div id='dogContainer'>
                         <img class='dogPhoto' :src="dog.photo" alt="">

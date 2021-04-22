@@ -277,7 +277,7 @@ export default {
             }
         },
     },
-    mounted() {
+    updated() {
         let email = this.$route.query.ownerEmail;
         // this.confirmedEmail = email;
         console.log("in mounted, this.$route.query.ownerEmail", email);

@@ -54,17 +54,7 @@
 export default {
     
     // middleware: "auth",
-    updated() {
-        this.timesTakenThisDate(this.date);
-        // this.makeToday();
-    },
-    mounted() {
-        this.makeToday();
-    },
-    created() {
-        this.setInitialDate();
-        // this.makeToday();
-    },
+
     async asyncData({ $axios }) {
       try {
         let dogsResponse = await $axios.$get("/api/dogs");
@@ -85,11 +75,22 @@ export default {
             time: "",
         }
     },
+    updated() {
+        this.timesTakenThisDate(this.date);
+        // this.makeToday();
+    },
+    mounted() {
+        this.makeToday();
+    },
+    created() {
+        this.setInitialDate();
+        // this.makeToday();
+    },
 
     methods: {
         showDogsInfo(){
             let dogs = this.dogs;
-            console.log("this.dogs", this.dogs)
+            console.log("this.dogs, dogs", this.dogs, dogs)
         },
         makeToday() {
             var today = new Date();

@@ -1,7 +1,7 @@
 <template>
     <main>
         
-        <button @click="console.log(this.dogs)">DOGS info</button>
+        <button @click="showDogsInfo()">DOGS info</button>
         
     </main>
 </template>
@@ -33,6 +33,9 @@ export default {
       }
     },
     methods: {
+        showDogsInfo() {
+            console.log("this.dogs",this.dogs)
+        }
     }
 
 }

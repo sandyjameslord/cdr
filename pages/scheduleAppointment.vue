@@ -276,7 +276,11 @@ export default {
                 this.time = "3pm - 5pm"; 
             }
         },
-    }    
+    },
+    mounted() {
+        let email = this.$route.query.ownerEmail;
+        console.log("in mounted, this.$route.query.ownerEmail", email)
+    },    
 }
 </script>
 

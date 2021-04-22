@@ -11,14 +11,17 @@
         <div id='scheduleAppointmentTitle'>Schedule appointment</div>
         
         
-            <div v-for="(dog) in dogs" :key="dog._id">
+        <div v-for="(dog) in dogs" :key="dog._id">
+            <img class='dogPhoto' :src="dog.photo" alt="">
+            <div class='dogName'>{{dog.dogName}}</div>
+            <div>DOG! (1 of many)</div>
             <!-- <div v-for="(dog, index) in dogs" :key="dog._id">                 -->
                 <!-- <div class='dogDisplay' v-if="(dog.ownerID == this.$route.query.ownerID)"> -->
                     <!-- <div v-if="(this.$route.query.dog == dog.dogName)"> -->
-                        <div id='dogContainer'>
-                            <img class='dogPhoto' :src="dog.photo" alt="">
-                            <div class='dogName'>{{dog.dogName}}</div>
-                        </div>  
+                        <!-- <div id='dogContainer'> -->
+                            <!-- <img class='dogPhoto' :src="dog.photo" alt="">
+                            <div class='dogName'>{{dog.dogName}}</div> -->
+                        <!-- </div>   -->
                     <!-- </div>      -->
                 <!-- </div> -->
         </div>
@@ -95,7 +98,6 @@ export default {
             today = yyyy+'-'+mm+'-'+dd;
             document.getElementById("dateField").setAttribute("min", today);
         },
-
         timesTakenThisDate(date) {
             try {
                 this.time = "";
@@ -274,31 +276,7 @@ export default {
                 this.time = "3pm - 5pm"; 
             }
         },
-    },
-    mounted() {
-        // let email = this.$route.query.ownerEmail;
-        // // this.confirmedEmail = email;
-        // console.log("in mounted, this.$route.query.ownerEmail", email);
-
-        // let ownerEmails = [];
-
-        // console.log("this.dogs", this.dogs)
-
-        // for (let i = 0; i < this.dogs.length; i++) {
-        //     let email = this.dogs[i].ownerEmail;
-        //     ownerEmails.push(email);
-        // }
-        
-        // let emailToPass = "";
-
-        // for (let i = 0; i < ownerEmails.length; i++) {
-        //     if (ownerEmails[i] == email) { 
-        //         emailToPass = ownerEmails[i]
-        //     }
-        // }
-        // this.emailToPass = emailToPass;
-
-    },    
+    }, 
 }
 </script>
 
